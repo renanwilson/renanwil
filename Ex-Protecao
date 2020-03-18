@@ -1,0 +1,79 @@
+public class Pessoa {
+	//Criando Atributos da Classe (Pessoa), do tipo Privado (private)
+	private String nome;
+	private String endereco;
+	private String telefone;
+	private String rg;
+	private int idade;
+	
+	//Criando Método Construtor
+	public Pessoa(String nome, String endereco, String telefone, String rg, int idade) {
+		this.nome = nome;
+		this.endereco = endereco;
+		this.telefone = telefone;
+		this.rg = rg;
+		this.idade = idade;
+	}
+	//Criando Métodos dos Tipos Get e Set
+	
+	//Get nome
+	public String getNome() {
+		return nome;
+	}
+	//Set Nome
+	public void setNome (String nome) {
+		this.nome = nome;
+	}
+	//Get Endereço
+	public String getEndereco() {
+		return endereco;
+	}
+	//Set Endereço
+	public void setEndereco (String endereco) {
+		this.endereco = endereco;
+	}
+	//Get Telefone
+	public String getTelefone() {
+		return telefone;
+	}
+	//Set Telefone
+	public void setTelefone (String telefone) {
+		this.telefone = telefone;
+	}
+	//Get RG
+	public String getRg() {
+		return rg;
+	}
+	//Set RG
+	public void setRg (String rg) {
+		this.rg = rg;
+	}
+	//Get Idade
+	public int getIdade() {
+		return idade;
+	}
+	//Set Idade
+	public void setIdade (int idade) {
+		this.idade = idade;
+	}
+	
+	public void apresentarPessoa() {
+		System.out.println("Nome: " +this.getNome());
+		System.out.println("Endereço: " +this.getEndereco());
+		System.out.println("Telefone: " +this.getTelefone());
+		System.out.println("RG: " +this.getRg());
+		System.out.println("Idade: " +this.getIdade());
+	}
+}
+
+
+public class Principal {
+	public static void main(String[] args) {
+		Pessoa renan = new Pessoa ("Renan Wilson", "São Matheus", "(11) 94896-8050", "87.418.888-t", 16);
+		Pessoa luiz = new Pessoa ("Luiz Menezes", "Cidade Tiradentes", "(11) 98071-6455", "12.853.332-4", 16);
+		
+		renan.apresentarPessoa();
+		System.out.println();
+		luiz.apresentarPessoa();
+	}
+}

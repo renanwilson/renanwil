@@ -1,0 +1,62 @@
+public class calculadora {
+	//Atributos
+	double numero1;
+	double numero2;
+	
+	//Métodos
+	
+	//Soma
+	void somar(){
+		double soma = numero1 + numero2;
+		System.out.println ("O valor da Soma entre os números é: "+soma);
+	}
+	//Subtração
+	void subtrair(){
+		double subtracao = numero1 - numero2;
+		System.out.println ("O valor da Subtração entre os números é: "+subtracao);
+	}
+	//Multiplicação
+	void multiplicar(){
+		double multiplicacao = numero1 * numero2;
+		System.out.println ("O valor da Multiplicação entre os números é: "+multiplicacao);
+	}
+	//Divisão
+	void dividir(){
+		double divisao = numero1 / numero2;
+		System.out.println ("O valor da Divisão entre os números é: "+divisao);
+	}
+}
+
+import java.util.Scanner;
+public class informacoes {
+	public static void main(String [] args) {
+	//Importando Scanner
+	Scanner in = new Scanner(System.in);
+	
+	//Instanciando
+	calculadora calculo = new calculadora();
+	
+	//Mensagem para Usuário e Leitura de Variável (numero2)
+	System.out.println("Insira o 1º Número para o cálculo:");
+	calculo.numero1 = in.nextDouble();
+	
+	//Mensagem para Usuário e Leitura de Variável (numero2)
+	System.out.println("Insira o 2º Número para o cálculo:");
+	calculo.numero2 = in.nextDouble();
+	
+	//Utilizando Método para Calcular e Apresentar a Soma
+	calculo.somar();
+	
+	//Utilizando Método para Calcular e Apresentar a Soma
+	calculo.subtrair();
+		
+	//Utilizando Método para Calcular e Apresentar a Soma
+	calculo.multiplicar();
+		
+	//Utilizando Método para Calcular e Apresentar a Soma
+	calculo.dividir();
+	
+	//Fechando Scanner
+	in.close();
+	}
+}

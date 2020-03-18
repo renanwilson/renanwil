@@ -1,0 +1,55 @@
+public class Pessoa {
+	//Atributos
+	String nome;
+	String sobrenome;
+	int anoDeNascimento;
+	int anoAtual;
+	
+	//Métodos
+	
+	//Calculando Idade
+	int calcularIdade(){
+		int idade = anoAtual - anoDeNascimento;
+		return idade;
+	}
+	//Apresentando Nome Completo
+	String mostrarNomeCompleto () {
+		String nomeCompleto = nome+" "+sobrenome;
+		return "Seu nome Completo é: "+nomeCompleto;
+	}
+}
+
+
+import java.util.Scanner;
+public class Informacoes {
+	public static void main (String [] args) {
+		//Importando o Scanner
+		Scanner in = new Scanner(System.in);
+		
+		//Instanciando
+		Pessoa idadeNome = new Pessoa();
+		
+		//Mensagem para Usuário e Leitura de Variável (anoDeNascimento)
+		System.out.println("Insira o Ano Atual:");
+		idadeNome.anoAtual = in.nextInt();
+		
+		//Mensagem para Usuário e Leitura de Variável (anoDeNascimento)
+		System.out.println("Insira o seu Ano de Nascimento:");
+		idadeNome.anoDeNascimento = in.nextInt();
+		
+		//Mensagem para Usuário e Leitura de Variável (nome)
+		System.out.println("\nInsira seu Nome:");
+		idadeNome.nome = in.next();
+		
+		//Mensagem para Usuário e Leitura de Variável (sobrenome)
+		System.out.println("Insira seu Sobrenome:");
+		idadeNome.sobrenome = in.next();
+		
+		//Mensagem para Usuário de Dados
+		System.out.println("\n"+idadeNome.calcularIdade()+" Anos de Idade");
+		System.out.println(idadeNome.mostrarNomeCompleto()+", certo?");
+		
+		//Fechando o Scanner
+		in.close();
+	}
+}

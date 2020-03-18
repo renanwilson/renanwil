@@ -1,0 +1,143 @@
+package packageInfos;
+
+public class Caminhao {
+	//Criando Atributos da Classe (Caminhao), do tipo Protegido (protected)
+	protected String cor;
+	protected int anoModelo;
+	protected String placa;
+	
+	//Criando Método Construtor
+	public Caminhao (String cor, int anoModelo, String placa) {
+		this.cor = cor;
+		this.anoModelo = anoModelo;
+		this.placa = placa;
+	}
+	
+	//Criando Métodos dos Tipos Get e Set
+	
+	//Get Cor
+	public String getCor() {
+		return cor;
+	}
+	//Set Cor
+	public void setCor (String cor) {
+		this.cor = cor;
+	}
+	
+	//Get AnoModelo
+	public int getAnoModelo() {
+		return anoModelo;
+	}
+	//Set AnoModelo
+	public void setAnoModelo (int anoModelo) {
+		this.anoModelo = anoModelo;
+	}
+	
+	//Get Placa
+	public String getPlaca() {
+		return placa;
+	}
+	//Set Placa
+	public void setNome (String placa) {
+		this.placa = placa;
+	}
+	
+	public void apresentarCaminhao() {
+		System.out.println("Cor do Caminhão: " +this.getCor());
+		System.out.println("Ano do Modelo do Caminhão: " +this.getAnoModelo());
+		System.out.println("Placa do Caminhão: " +this.getPlaca());
+	}
+}
+
+package packageInfos;
+
+public class Carro {
+	//Criando Atributos da Classe
+	public String cor;
+	public int anoModelo;
+	public String placa;
+	
+	//Criando Método Construtor
+	public Carro (String cor, int anoModelo, String placa) {
+		this.cor = cor;
+		this.anoModelo = anoModelo;
+		this.placa = placa;
+	}
+	
+	public void apresentarCarro() {
+		System.out.println("Cor do Carro: " +this.cor);
+		System.out.println("Ano do Modelo do Carro: " +this.anoModelo);
+		System.out.println("Placa do Carro: " +this.placa);
+	}
+}
+
+package packageInfos;
+
+public class Moto {
+	//Criando Atributos da Classe (Moto)
+	private String cor;
+	private int anoModelo;
+	private String placa;
+	
+	//Criando Método Construtor
+	public Moto (String cor, int anoModelo, String placa) {
+		this.cor = cor;
+		this.anoModelo = anoModelo;
+		this.placa = placa;
+	}
+	
+	//Criando Métodos dos Tipos Get e Set
+	
+	//Get Cor
+	public String getCor() {
+		return cor;
+	}
+	//Set Cor
+	public void setCor (String cor) {
+		this.cor = cor;
+	}
+	
+	//Get AnoModelo
+	public int getAnoModelo() {
+		return anoModelo;
+	}
+	//Set AnoModelo
+	public void setAnoModelo (int anoModelo) {
+		this.anoModelo = anoModelo;
+	}
+	
+	//Get Placa
+	public String getPlaca() {
+		return placa;
+	}
+	//Set Placa
+	public void setNome (String placa) {
+		this.placa = placa;
+	}
+	
+	public void apresentarMoto() {
+		System.out.println("Cor da Moto: " +this.getCor());
+		System.out.println("Ano do Modelo da Moto: " +this.getAnoModelo());
+		System.out.println("Placa da Moto: " +this.getPlaca());
+	}
+}
+
+package packagePrincipal;
+
+import packageInfos.Moto;
+import packageInfos.Carro;
+import packageInfos.Caminhao;
+
+public class Principal {
+	public static void main(String[] args) {
+		Moto moto = new Moto ("Branco", 1990, "TUY-6409");
+		Carro carro = new Carro ("Cinza", 2000, "RIO-3019");
+		Caminhao caminhao = new Caminhao ("Preto", 2007, "ELA-1278");
+		
+		moto.apresentarMoto();
+		System.out.println();
+		carro.apresentarCarro();
+		System.out.println();
+		caminhao.apresentarCaminhao();
+	}
+}

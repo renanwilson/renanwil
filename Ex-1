@@ -1,0 +1,51 @@
+public class quadrado {
+	double base;
+	double altura;
+	
+	void calcularArea(){
+		double area = base * altura;
+		
+		System.out.println("O valor da área é equivalente a "+area);
+	}
+}
+
+import java.util.Scanner;
+public class informacoes {
+	public static void main(String[] args) {
+		//Importando um novo Scanner
+		Scanner in = new Scanner(System.in);
+		
+		//Instanciando um novo objeto (quadrado1)
+		quadrado quadrado1 = new quadrado();
+		
+		//Mensagem para Usuário e Leitura de Variável (base)
+		System.out.println("Insira o valor da Base do Quadrado 1:");
+		quadrado1.base = in.nextDouble();
+		
+		//Mensagem para Usuário e Leitura de Variável (altura)
+		System.out.println("Insira o valor da Altura do Quadrado 1:");
+		quadrado1.altura = in.nextDouble();
+		
+		//Utilizando Método para Calcular e Apresentar Área do Quadrado
+		quadrado1.calcularArea();
+		
+		//Instanciando um novo objeto (quadrado2)
+		quadrado quadrado2 = new quadrado();
+		
+		//Pulando Linha
+		System.out.println("\n");
+		
+		//Mensagem para Usuário e Leitura de Variável (base)
+		System.out.println("Insira o valor da Base do Quadrado 2:");
+		quadrado2.base = in.nextDouble();
+		
+		//Mensagem para Usuário e Leitura de Variável (altura)
+		System.out.println("Insira o valor da Altura do Quadrado 2:");
+		quadrado2.altura = in.nextDouble();
+		
+		//Utilizando Método para Calcular e Apresentar Área do Quadrado
+		quadrado2.calcularArea();
+		
+		in.close();
+	}
+}

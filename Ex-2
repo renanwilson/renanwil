@@ -1,0 +1,62 @@
+public class conta {
+	//Atributos - Variáveis
+	String nome;
+	double salarioBruto = 0;
+	double imposto = 0;
+	
+	//Métodos
+	double SalarioLiquido() {
+		double retorno;
+		
+		//Cálculo Mametático
+		retorno = this.salarioBruto - this.imposto;
+		
+		//Mensagem para Usuário
+		System.out.println("Salario Liquido de " + this.nome + ": " + retorno);
+		
+		//Retornando a Variável (retorno)
+		return retorno;
+	}
+	
+	void AumentaSalario(double valor) {
+		//Método para aumentar o Salário
+		this.salarioBruto += valor;
+		
+	}
+}
+
+public class contasUsers {
+	public static void main(String[] args) {
+		
+		conta Pedro = new conta();
+		
+		conta Vagner = new conta();
+		
+		//instanciando objetos
+		
+		Pedro.nome = "Pedro";
+		
+		Vagner.nome = "Vagner";
+		
+		//definindo nomes
+		
+		Pedro.imposto = 1000;
+		
+		Vagner.imposto = 500;
+		
+		//definindo imposto
+		
+		Pedro.AumentaSalario(10000);
+		
+		Vagner.AumentaSalario(2000);
+		
+		//definindo o salario
+		//como eu iniciei cada salario como 0, eh so atribuir o valor do salario inicial
+		
+		double salarioLiquidoPedro = Pedro.SalarioLiquido();
+		
+		double salarioLiquidoVagner = Vagner.SalarioLiquido();
+		
+	}
+
+}

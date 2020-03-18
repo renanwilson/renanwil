@@ -1,0 +1,57 @@
+public class calculosAreas {
+	double base;
+	double altura;
+	
+	void calcularAreaRetangulo(){
+		double area = base * altura;
+		
+		System.out.println("O valor da área do Retângulo é equivalente a "+area);
+	}
+	void calcularAreaTriangulo(){
+		double area = (base * altura) / 2;
+		
+		System.out.println("O valor da área do Triângulo é equivalente a "+area);
+	}
+
+}
+
+import java.util.Scanner;
+public class informacoes {
+	public static void main(String[] args) {
+		//Importando um novo Scanner
+		Scanner in = new Scanner(System.in);
+		
+		//Instanciando um novo objeto (quadrado1)
+		calculosAreas retangulo = new calculosAreas();
+		
+		//Mensagem para Usuário e Leitura de Variável (base)
+		System.out.println("Insira o valor da Base do Retângulo:");
+		retangulo.base = in.nextDouble();
+		
+		//Mensagem para Usuário e Leitura de Variável (altura)
+		System.out.println("Insira o valor da Altura do Retângulo:");
+		retangulo.altura = in.nextDouble();
+		
+		//Utilizando Método para Calcular e Apresentar Área do Quadrado
+		retangulo.calcularAreaRetangulo();
+		
+		//Instanciando um novo objeto (quadrado2)
+		calculosAreas triangulo = new calculosAreas();
+		
+		//Pulando Linha
+		System.out.println("\n");
+		
+		//Mensagem para Usuário e Leitura de Variável (base)
+		System.out.println("Insira o valor da Base do Triângulo:");
+		triangulo.base = in.nextDouble();
+		
+		//Mensagem para Usuário e Leitura de Variável (altura)
+		System.out.println("Insira o valor da Altura do Triângulo:");
+		triangulo.altura = in.nextDouble();
+		
+		//Utilizando Método para Calcular e Apresentar Área do Quadrado
+		triangulo.calcularAreaTriangulo();
+		
+		in.close();
+	}
+}
